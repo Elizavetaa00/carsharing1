@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Тарифы</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <img src="carsharing.png" alt="Логотип салона" class="logo">
+            <nav class="navbar">
+                <a href="index.html">Главная</a>
+                <a href="about.html">О сервисе</a>
+                <a href="tariffs.html">Тарифы</a>
+                <a href="help.html">Помощь</a>
+                <a href="blog.html">Блог</a>
+                <a href="contacts.html">Контакты</a>
+                <div class="username-display" id="usernameDisplay"></div>
+            </nav>
+        </div>
+    </header>
+
+<div class="page-wrapper">
+  <section>
+    <h2>Прайс</h2>
+    <table>
+      <tr><th>Тип авто</th><th>Поминутно</th><th>Посуточно</th></tr>
+      <tr><td>Эконом</td><td>5 руб/мин</td><td>1800 руб/сутки</td></tr>
+      <tr><td>Комфорт</td><td>7 руб/мин</td><td>2400 руб/сутки</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Дополнительные услуги</h2>
+    <ul>
+      <li>Детское кресло</li>
+      <li>Доставка автомобиля</li>
+      <li>Страховка</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Калькулятор стоимости</h2>
+    <form>
+      <label for="car-type">Тип авто:</label>
+      <select id="car-type">
+        <option value="5">Эконом (5 руб/мин)</option>
+        <option value="7">Комфорт (7 руб/мин)</option>
+      </select>
+      <label for="minutes">Время аренды (мин):</label>
+      <input type="number" id="minutes" placeholder="Введите время">
+      <button type="button" onclick="calculate()">Рассчитать</button>
+      <p id="result"></p>
+    </form>
+  </section>
+
+  <script>
+    function calculate() {
+      const rate = parseFloat(document.getElementById('car-type').value);
+      const minutes = parseInt(document.getElementById('minutes').value);
+      const total = rate * minutes;
+      document.getElementById('result').textContent = `Примерная стоимость: ${total} руб.`;
+    }
+  </script>
+</div> <!-- конец .page-wrapper -->
+<footer>
+        <div class="footer-links">
+            <a href="index.html">Главная</a>
+            <a href="about.html">О сервисе</a>
+            <a href="tariffs.html">Тарифы</a>
+            <a href="help.html">Помощь</a>
+            <a href="blog.html">Блог</a>
+            <a href="contacts.html">Контакты</a>
+        </div>
+        <div class="footer-contact">
+            <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+            <p><strong>Email:</strong> info@carsharing.ru</p>
+        </div>
+    </footer>
+</body>
+</html>

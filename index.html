@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Главная — Каршеринг</title>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo-container">
+      <img src="img/logo.png" alt="Логотип салона" class="logo">
+    </div>
+    <nav class="navbar">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О сервисе</a>
+      <a href="tariffs.html">Тарифы</a>
+      <a href="help.html">Помощь</a>
+      <a href="blog.html">Блог</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+  </div>
+</header>
+
+
+<div class="page-wrapper">
+
+  <main class="container">
+    <div class="banner">
+      <div class="slider">
+        <img class="slide active" src="img/carsharing-banner.jpg" alt="Каршеринг 1">
+        <img class="slide" src="img/carsharing-banner2.jpg" alt="Каршеринг 2">
+        <img class="slide" src="img/carsharing-banner3.jpg" alt="Каршеринг 3">
+        <img class="slide" src="img/carsharing-banner4.jpg" alt="Каршеринг 3">
+        <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next" onclick="changeSlide(1)">&#10095;</button>
+      </div>
+    </div>
+
+    <section>
+      <h2>Что такое каршеринг?</h2>
+      <p>Каршеринг — это удобный способ аренды автомобиля на короткое время. Вы можете взять авто в любой точке города и вернуть его там, где удобно.</p>
+    </section>
+
+    <section>
+      <h2>Преимущества</h2>
+      <ul>
+        <li>Экономия: платите только за время использования.</li>
+        <li>Экологичность: новые электромобили в нашем парке.</li>
+        <li>Удобство: доступ через мобильное приложение 24/7.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Быстрые ссылки</h2>
+      <a href="tariffs.html">Тарифы</a> |
+      <a href="about.html">Как начать</a> |
+      <a href="contacts.html">Контакты</a>
+    </section>
+
+    <section>
+      <h2>Новости и акции</h2>
+      <ul>
+        <li>🔥 Скидка 20% для новых пользователей до конца месяца!</li>
+        <li>🚗 Новый парк автомобилей доступен в Москве и СПб!</li>
+      </ul>
+    </section>
+  </main>
+
+</div> <!-- конец .page-wrapper -->
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Главная</a>
+    <a href="about.html">О сервисе</a>
+    <a href="tariffs.html">Тарифы</a>
+    <a href="help.html">Помощь</a>
+    <a href="blog.html">Блог</a>
+    <a href="contacts.html">Контакты</a>
+  </div>
+  <div class="footer-contact">
+    <p><strong>Телефон:</strong> +7 (999) 123-45-67</p>
+    <p><strong>Email:</strong> info@carsharing.ru</p>
+  </div>
+</footer>
+<script src="js/script.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        startTime();
+    });
+</script>
+</body>
+</html>
